@@ -60,7 +60,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+@videogular/ngx-videogular/buffering
+
+@videogular/ngx-videogular/controls
+
 @videogular/ngx-videogular/core
+
+@videogular/ngx-videogular/overlay-play
 
 core-js
 MIT
