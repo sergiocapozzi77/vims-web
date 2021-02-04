@@ -28,9 +28,14 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/@videogular/ngx-videogular/fonts/videogular.css",
+              "node_modules/video.js/dist/video-js.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/hls.js/dist/hls.min.js",
+              "node_modules/video.js/dist/video.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -93,6 +98,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/@videogular/ngx-videogular/fonts/videogular.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -122,8 +128,13 @@
               "devServerTarget": "web-vims:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "web-vims"
 }
