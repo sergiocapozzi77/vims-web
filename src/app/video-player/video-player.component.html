@@ -1,5 +1,5 @@
 <vg-player (onPlayerReady)="onPlayerReady($event)">
-    <video [vgMedia]="media" #media id="singleVideo" controls autoplay  >
+    <video [vgMedia]="media" #media id="singleVideo" controls autoplay [muted]="true">
         <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
     </video>
 </vg-player>
