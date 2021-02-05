@@ -12,6 +12,7 @@ const INITIAL_LAYOUT: GoldenLayout.Config = {
       content: [
         {
           type: "component",
+          componentName: "resource-tree",
           title: "List",
           width: 18,
           isClosable: false,

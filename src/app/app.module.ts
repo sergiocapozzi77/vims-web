@@ -16,6 +16,8 @@ import { MainDockingComponent } from './main-docking/main-docking.component';
 import { VideoPlayerLiveComponent } from './video-player-live/video-player-live.component';
 import { VideoPlayerJsComponent } from './video-player-js/video-player-js.component';
 import { ResourceTreeComponent } from './resource-tree/resource-tree.component';
+import { AgGridModule } from 'ag-grid-angular';
+import 'ag-grid-enterprise';
 
 // It is required to have JQuery as global in the window object.
 window['$'] = $;
@@ -66,6 +68,7 @@ const componentTypes: ComponentType[] = [{
       { useHash: false }
     ),
     GoldenLayoutModule.forRoot(componentTypes),
+    AgGridModule.withComponents([])
   ],
   providers: [],
   bootstrap: [AppComponent]
