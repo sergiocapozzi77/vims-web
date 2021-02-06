@@ -83,6 +83,7 @@ const INITIAL_LAYOUT: GoldenLayout.Config = {
                 {
                   type: "component",
                   title: "Bottom",
+                  componentName: "alarm-viewer",
                   isClosable: false,
                 },
                 {

@@ -18,6 +18,7 @@ import { VideoPlayerJsComponent } from './video-player-js/video-player-js.compon
 import { ResourceTreeComponent } from './resource-tree/resource-tree.component';
 import { AgGridModule } from 'ag-grid-angular';
 import 'ag-grid-enterprise';
+import { AlarmViewerComponent } from './alarm-viewer/alarm-viewer.component';
 
 // It is required to have JQuery as global in the window object.
 window['$'] = $;
@@ -44,6 +45,10 @@ const componentTypes: ComponentType[] = [{
 {
   name: 'resource-tree',
   type: ResourceTreeComponent,
+},
+{
+  name: 'alarm-viewer',
+  type: AlarmViewerComponent,
 }];
 
 @NgModule({
@@ -53,7 +58,8 @@ const componentTypes: ComponentType[] = [{
     VideoPlayerComponent,
     VideoPlayerLiveComponent,
     VideoPlayerJsComponent,
-    ResourceTreeComponent
+    ResourceTreeComponent,
+    AlarmViewerComponent
   ],
   imports: [
     BrowserModule,
