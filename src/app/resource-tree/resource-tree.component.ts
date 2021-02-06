@@ -19,83 +19,130 @@ export class ResourceTreeComponent {
   constructor() {
     this.rowData = [
       {
-        orgHierarchy: ['Erica Rogers'],
+        orgHierarchy: ['Gucci'],
       },
       {
-        orgHierarchy: ['Erica Rogers', 'Malcolm Barrett'],
+        orgHierarchy: ['Gucci', 'Via Condotti'],
       },
       {
-        orgHierarchy: ['Erica Rogers', 'Malcolm Barrett', 'Esther Baker'],
+        orgHierarchy: ['Gucci', 'Via Condotti', 'Interno'],
       },
       {
         orgHierarchy: [
-          'Erica Rogers',
-          'Malcolm Barrett',
-          'Esther Baker',
-          'Brittany Hanson',
+          'Gucci',
+          'Via Condotti',
+          'Interno',
+          'Telecamera 01',
         ],
       },
       {
         orgHierarchy: [
-          'Erica Rogers',
-          'Malcolm Barrett',
-          'Esther Baker',
-          'Brittany Hanson',
-          'Leah Flowers',
+          'Gucci',
+          'Via Condotti',
+          'Interno',
+          'Telecamera 01'
         ],
       },
       {
         orgHierarchy: [
-          'Erica Rogers',
-          'Malcolm Barrett',
-          'Esther Baker',
-          'Brittany Hanson',
-          'Tammy Sutton',
+          'Gucci',
+          'Via Condotti',
+          'Interno',
+          'Telecamera 01'
         ],
       },
       {
         orgHierarchy: [
-          'Erica Rogers',
-          'Malcolm Barrett',
-          'Esther Baker',
-          'Derek Paul',
-        ],
-      },
-      {
-        orgHierarchy: ['Erica Rogers', 'Malcolm Barrett', 'Francis Strickland'],
-      },
-      {
-        orgHierarchy: [
-          'Erica Rogers',
-          'Malcolm Barrett',
-          'Francis Strickland',
-          'Morris Hanson',
+          'Gucci',
+          'Via Condotti',
+          'Interno',
+          'Telecamera 02',
         ],
       },
       {
         orgHierarchy: [
-          'Erica Rogers',
-          'Malcolm Barrett',
-          'Francis Strickland',
-          'Todd Tyler',
+          'Gucci',
+          'Via Condotti',
+          'Interno',
+          'Telecamera 03'
         ],
       },
       {
         orgHierarchy: [
-          'Erica Rogers',
-          'Malcolm Barrett',
-          'Francis Strickland',
-          'Bennie Wise',
+          'Gucci',
+          'Via Condotti',
+          'Interno',
+          'Telecamera 04'
         ],
       },
       {
         orgHierarchy: [
-          'Erica Rogers',
-          'Malcolm Barrett',
-          'Francis Strickland',
-          'Joel Cooper',
+          'Gucci',
+          'Via Condotti',
+          'Interno',
+          'Telecamera 05',
         ],
       },
+      {
+        orgHierarchy: ['Gucci', 'Via Condotti', 'Esterno', 'Telecamera 03'],
+      },
+      {
+        orgHierarchy: [
+          'Gucci',
+          'Via Condotti',
+          'Esterno',
+          'Telecamera 04',
+        ],
+      },
+      {
+        orgHierarchy: [
+          'Gucci',
+          'Via Condotti',
+          'Uffici',
+          'Telecamera 05',
+        ],
+      },
+      {
+        orgHierarchy: [
+          'Gucci',
+          'Via Condotti',
+          'Uffici',
+          'Telecamera 06',
+        ],
+      },
+      {
+        orgHierarchy: [
+          'Gucci',
+          'Via Condotti',
+          'Uffici',
+          'Telecamera 07',
+        ],
+      },
+      ,
+      {
+        orgHierarchy: [
+          'Gucci',
+          'Via Condotti',
+          'Uffici',
+          'Telecamera 08',
+        ],
+      },
+      {
+        orgHierarchy: [
+          'Gucci',
+          'Via Condotti',
+          'Uffici',
+          'Telecamera 09',
+        ],
+      },
+      {
+        orgHierarchy: [
+          'Gucci',
+          'Via Condotti',
+          'Uffici',
+          'Telecamera 10',
+        ],
+      }
     ];
     this.columnDefs = [];
     this.defaultColDef = { flex: 1 };

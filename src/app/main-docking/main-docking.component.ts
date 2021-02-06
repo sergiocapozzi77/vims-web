@@ -13,7 +13,7 @@ const INITIAL_LAYOUT: GoldenLayout.Config = {
         {
           type: "component",
           componentName: "resource-tree",
-          title: "List",
+          title: "Risorse",
           width: 18,
           isClosable: false,
         },
@@ -82,13 +82,13 @@ const INITIAL_LAYOUT: GoldenLayout.Config = {
               content: [
                 {
                   type: "component",
-                  title: "Bottom",
+                  title: "Allarmi",
                   componentName: "alarm-viewer",
                   isClosable: false,
                 },
                 {
                   type: "component",
-                  title: "Bottom",
+                  title: "Altro",
                   isClosable: false,
                 }],
             }
