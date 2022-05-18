@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { AlarmViewerComponent } from './alarm-viewer.component';
 
@@ -6,7 +6,7 @@ describe('AlarmViewerComponent', () => {
   let component: AlarmViewerComponent;
   let fixture: ComponentFixture<AlarmViewerComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ AlarmViewerComponent ]
     })

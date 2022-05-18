@@ -71,7 +71,7 @@ const componentTypes: ComponentType[] = [{
     VgStreamingModule,
     RouterModule.forRoot(
       appRoutes,
-      { useHash: false }
+      { useHash: false, relativeLinkResolution: 'legacy' }
     ),
     GoldenLayoutModule.forRoot(componentTypes),
     AgGridModule.withComponents([])
