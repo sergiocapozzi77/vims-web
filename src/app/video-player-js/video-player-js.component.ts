@@ -1,58 +1,85 @@
-import { Component, AfterViewInit, Input } from '@angular/core';
-import videojs from 'video.js';
+import {
+  Component,
+  AfterViewInit,
+  Input,
+  ElementRef,
+  ViewChild,
+  Inject,
+  OnDestroy,
+} from '@angular/core';
+import { GoldenLayoutComponentState } from 'ngx-golden-layout';
+import videojs, { VideoJsPlayerOptions } from 'video.js';
+import { DockingVideoState } from '../core/models/docking-video-component-state';
 
 @Component({
   selector: 'app-video-player-js',
   templateUrl: './video-player-js.component.html',
-  styleUrls: ['./video-player-js.component.scss']
+  styleUrls: ['./video-player-js.component.scss'],
 })
-export class VideoPlayerJsComponent implements AfterViewInit  {
-  public vjs: videojs.Player;
+export class VideoPlayerJsComponent implements AfterViewInit, OnDestroy {
+  public player: videojs.Player;
+  @ViewChild('target', { static: true }) target: ElementRef;
+
   @Input() urlVideo: string;
   @Input() urlPoster: string;
 
-  id:string = Guid.newGuid();
+  // id: string = Guid.newGuid();
 
-  constructor() { }
+  constructor(
+    @Inject(GoldenLayoutComponentState) public state: DockingVideoState
+  ) {}
 
-  ngOnInit() {
+  ngOnDestroy() {
+    if (this.player) {
+      this.player.dispose();
+    }
   }
+
   ngAfterViewInit() {
     const options = {
-      'sources' : [{
-        'src' : "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4",
-        'type' : 'video/mp4'
-        }
+      autoplay: true,
+      muted: true,
+      sources: [
+        {
+          src: this.state.url,
+        },
       ],
-      'poster' : this.urlPoster
-    };
-/*
-    this.vjs = videojs(this.id, options);
+      poster: this.urlPoster,
+    } as VideoJsPlayerOptions;
 
-    let f = this;
-    this.vjs.ready(x => {
+    this.player = videojs(
+      this.target.nativeElement,
+      options,
+      this.onPlayerReady.bind(this)
+    );
 
-      var promise = this.vjs.play();
-      console.log("play ");
+    // const f = this;
+    // this.player.ready(() => {
+    //   const promise = this.player.play();
+    //   console.log('play ');
 
-      if (promise !== undefined) {
-        promise.then(function() {
-          // Autoplay started!
-        }).catch(function(error) {
-          console.log("autoplay failure " + error);
-        });
-      }
-    });*/
-
+    //   if (promise !== undefined) {
+    //     promise
+    //       .then(() => {
+    //           // Autoplay started!
+    //         })
+    //       .catch((error) => {
+    //           console.log('autoplay failure ' + error);
+    //         });
+    //   }
+    // });
   }
-}
 
-class Guid {
-  static newGuid() {
-    return 'plxxxxxxxx'.replace(/[xy]/g, function(c) {
-      var r = Math.random() * 16 | 0,
-        v = c == 'x' ? r : (r & 0x3 | 0x8);
-      return v.toString(16);
-    });
+  onPlayerReady() {
+    // this.player.on("loadedmetadata", (x) => {
+    //   console.log("Metadata", x);
+    // });
+    // this.player.on("timeupdate", () => {});
+    // this.player.on("loadeddata", () => {});
+
+    this.player.on('loadedmetadata', () => {});
+
+    this.player.addChild('TitleBar', { text: 'Custom title bar component.' });
+    this.player.addChild('CustomButton');
   }
 }
